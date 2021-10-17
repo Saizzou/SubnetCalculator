@@ -1,5 +1,5 @@
 <h1 align="center">Subnet Hesaplayici(ING)</h1>
-<img alt="Görünüm" src="IMG/Screenshot_20211017_170949.png">
+<img alt="Görünüm" src="IMG/Screenshot_20211017_170949.png" align="center">
 <div align="center">
   <strong>PyQt5 ile hazirlanmis Subnet Hesaplayici</strong>
 </div>
