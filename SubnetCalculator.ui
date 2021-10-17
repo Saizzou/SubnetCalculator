@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SubnetCalculator</class>
+ <widget class="QWidget" name="SubnetCalculator">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>508</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Subnet Calculator</string>
+  </property>
+  <widget class="QLabel" name="label_SubnetCalculator">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>10</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Subnet Calculator</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_NetworkClass">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>181</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Network Class:</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_A">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>41</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_B">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>70</y>
+     <width>41</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>B</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_C">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>70</y>
+     <width>41</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>C</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_FirstOctet">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>40</y>
+     <width>171</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>First Octet Range:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_FirstOctet">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>60</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1-126</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_HexIpAddress">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>100</y>
+     <width>171</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Hex IP Address:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_HexIpAddress">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>120</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0A.FF.FF.FF.FF</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_IpAddress">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>171</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>IP Address:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_IpAddress">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>10.255.255.255</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_WildcardMask">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>160</y>
+     <width>171</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Wildcard Mask:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_WildcardMask">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>180</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0.255.255.255</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_SubnetMask">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>171</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Subnet Mask:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_SubnetMask">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>180</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>255.0.0.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.128.0.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.192.0.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.224.0.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.240.0.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.248.0.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.252.0.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.254.0.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.0.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.128.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.192.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.224.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.240.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.248.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.252.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.254.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.255.0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.255.128</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.255.192</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.255.224</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.255.240</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.255.248</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>255.255.255.252</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_SubnetBits">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>11</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>13</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>14</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>15</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>17</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>18</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>19</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>20</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>21</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>22</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_SubnetBits">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>220</y>
+     <width>171</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Subnet Bits:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_MaskBits">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>240</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>11</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>13</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>14</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>15</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>17</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>18</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>19</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>20</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>21</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>22</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>23</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>24</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>25</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>26</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>27</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>28</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>29</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_MaskBits">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>220</y>
+     <width>171</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mask Bits:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_MaximumSubnet">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>280</y>
+     <width>171</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Maximum Subnet:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_MaxSubnet">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>300</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>32</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>64</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>128</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>256</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>512</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1024</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2048</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4096</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8192</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16384</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>32768</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>65536</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>131072</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>262144</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>524288</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1048576</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2097152</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4194304</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_HostPerSubnet">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>280</y>
+     <width>171</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Hosts per Subnet:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_HostPerSubnet">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>300</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>16777214</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8388606</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4194302</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2097150</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1048574</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>524286</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>262142</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>131070</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>65534</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>32766</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16382</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8190</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4094</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2046</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1022</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>510</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>254</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>126</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>62</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>14</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_HostRange">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>350</y>
+     <width>171</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Host Address Range:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_HostRange">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>370</y>
+     <width>371</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>10.0.0.1-10.255.255.255</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_SubnetID">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>430</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>10.0.0.0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_SubnetID">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>410</y>
+     <width>171</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Subnet ID:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_BroadcastAddress">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>430</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>10.255.255.255</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_BroadcastAddress">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>410</y>
+     <width>171</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Broadcast Address:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_ExitSubnetCalculator">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>470</y>
+     <width>88</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
